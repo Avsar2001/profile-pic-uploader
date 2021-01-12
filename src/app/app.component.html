@@ -1,0 +1,27 @@
+
+  <h1 class="title">Upload Here</h1>
+  <input type="file" (change)="onProfilePicSelected($event)" #profilePicInput hidden="true">
+<div class="profile-photo">
+  <img [src]="previewPic ? previewPic : '' " alt="">
+  <span style="margin: 5px -30px;" class="image-edit-icon">
+    <svg (click)="profilePicInput.click()" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
+      viewBox="0 0 172 172" style=" fill:#000000;">
+      <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+        stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+        <path d="M0,172v-172h172v172z" fill="none"></path>
+        <g fill="#000000">
+          <path
+            d="M131.96744,14.33333c-1.83376,0 -3.66956,0.69853 -5.06706,2.09961l-12.23372,12.23372l28.66667,28.66667l12.23372,-12.23372c2.80217,-2.80217 2.80217,-7.33911 0,-10.13412l-18.53255,-18.53255c-1.40108,-1.40108 -3.23329,-2.09961 -5.06706,-2.09961zM103.91667,39.41667l-82.41667,82.41667v28.66667h28.66667l82.41667,-82.41667z">
+          </path>
+        </g>
+      </g>
+    </svg>
+  </span>
+</div>
+<button type="button" (click)="onSubmit()" class="btn btn-outline-warning">Upload</button>
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-atom">
+  <p style="font-size: 20px; color: white">Uploading...</p>
+</ngx-spinner>
+
+
